@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A funded route into your new AI capability · A proposal for PortSwigger</title>
+<meta name="description" content="A specific proposal for PortSwigger: sponsor Qamar Hussain onto the government-funded Level 4 AI and Automation Practitioner apprenticeship as an entry route into the internal AI capability the company is building.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23BE4B18'/><text x='32' y='45' font-family='Georgia,serif' font-size='36' fill='%23FFFFFF' text-anchor='middle'>Q</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.className='js';</script>
+<style>
+:root{
+  --bg:#F5F6F4;
+  --surface:#FFFFFF;
+  --ink:#16232B;
+  --slate:#22343F;
+  --muted:#54666E;
+  --faint:#8B9AA1;
+  --line:#DDE2DE;
+  --accent:#BE4B18;
+  --accent-deep:#93390F;
+  --accent-tint:#F6E8DE;
+  --tint-bg:#F7ECE3;
+  --dark:#101C23;
+  --dark-line:#25363F;
+  --on-dark:#DCE4E1;
+  --on-dark-muted:#93A5AC;
+  --accent-light:#E98B55;
+  --disp:'Bricolage Grotesque',Archivo,system-ui,sans-serif;
+  --body:'Atkinson Hyperlegible',Verdana,system-ui,sans-serif;
+  --mono:'Spline Sans Mono','IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:17px;line-height:1.68;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:#F0D9C7;color:#16232B}
+img,svg{display:block}
+a{color:var(--accent-deep)}
+p{margin:0 0 16px}
+p:last-child{margin-bottom:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.prose{max-width:70ch}
+.sec{padding:104px 0;scroll-margin-top:78px}
+.sec.alt{background:var(--surface)}
+.sec.tinted{background:var(--tint-bg)}
+.sec.dark{background:var(--dark);color:var(--on-dark)}
+h1,h2,h3{font-family:var(--disp);color:var(--ink)}
+h1{font-size:clamp(40px,6.2vw,68px);font-weight:700;line-height:1.05;letter-spacing:-0.015em;margin:0 0 22px;max-width:17ch}
+h2{font-size:clamp(30px,4vw,44px);font-weight:700;line-height:1.1;letter-spacing:-0.01em;margin:0 0 18px;max-width:24ch}
+h3{font-size:21px;font-weight:600;line-height:1.3;margin:0 0 10px}
+.lead{font-size:19.5px;color:var(--muted);max-width:66ch}
+.pull{font-weight:700;color:var(--ink);font-size:18px}
+.kicker{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.kicker .kn{color:var(--faint)}
+.kicker::after{content:"";height:1px;width:44px;background:var(--line)}
+.dark .kicker .kn{color:var(--on-dark-muted)}
+.dark .kicker::after{background:var(--dark-line)}
+.dark h2{color:#fff}
+.dark p{color:var(--on-dark)}
+.dark strong{color:#fff}
+
+/* skip link */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;z-index:99;font-weight:700;text-decoration:none}
+.skip:focus{left:0}
+
+/* nav */
+.top-nav{position:sticky;top:0;z-index:50;background:rgba(245,246,244,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .25s}
+.top-nav.scrolled{box-shadow:0 6px 24px rgba(22,35,43,.07)}
+.nav-in{display:flex;align-items:center;gap:18px;height:60px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:0 0 auto}
+.bm{width:30px;height:30px;border-radius:8px;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:var(--disp);font-weight:700;font-size:16px}
+.bt{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.bt b{color:var(--ink);font-weight:600}
+.nav-links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;-webkit-overflow-scrolling:touch}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{padding:8px 11px;border-radius:8px;font-size:13.5px;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.active{background:var(--accent-tint);color:var(--accent-deep);font-weight:700}
+.nav-cta{flex:0 0 auto;font-size:13.5px;font-weight:700;color:#fff;background:var(--accent);padding:9px 16px;border-radius:9px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--accent-deep)}
+@media (max-width:980px){.nav-cta{display:none}}
+@media (max-width:700px){.bt{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;font-weight:700;font-size:16px;padding:15px 26px;border-radius:12px;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
+.btn:hover{background:var(--accent-deep);transform:translateY(-1px);box-shadow:0 10px 24px rgba(190,75,24,.28)}
+.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+.quiet-link{color:var(--muted);text-decoration:none;font-weight:700;border-bottom:1.5px solid var(--line);padding-bottom:2px;transition:color .15s,border-color .15s}
+.quiet-link:hover{color:var(--ink);border-color:var(--accent)}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+.js .reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:64px 0 100px}
+.hero::after{content:"";position:absolute;right:-160px;bottom:-260px;width:560px;height:560px;border-radius:50%;background:radial-gradient(closest-side,rgba(190,75,24,.10),transparent 70%);pointer-events:none}
+.docmeta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:60px;font-family:var(--mono)}
+.dm{background:var(--surface);padding:11px 16px}
+.dm span{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:3px}
+.dm div{font-size:12.5px;font-weight:500;color:var(--slate);letter-spacing:.02em}
+@media (max-width:820px){.docmeta{grid-template-columns:repeat(2,1fr)}}
+.eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.cta-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin:34px 0 40px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px}
+.fact{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 15px}
+.credit{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--faint)}
+
+/* alignment map */
+.map{margin-top:44px;border-top:1px solid var(--line)}
+.map-head{display:grid;grid-template-columns:1fr 44px 1.3fr;gap:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);padding:14px 0 10px}
+.maprow{display:grid;grid-template-columns:1fr 44px 1.3fr;gap:16px;align-items:center;padding:19px 0;border-top:1px solid var(--line)}
+.m-left{font-weight:700;color:var(--ink);font-size:16.5px}
+.m-arrow{width:34px;height:34px;border-radius:50%;background:var(--accent-tint);color:var(--accent-deep);display:grid;place-items:center;font-weight:700;font-size:16px}
+.m-right{color:var(--muted);font-size:16px}
+.u-ref{font-family:var(--mono);font-size:12px;background:var(--surface);border:1px solid var(--line);padding:3px 9px;border-radius:6px;color:var(--slate);margin-right:9px;white-space:nowrap;font-weight:500}
+@media (max-width:760px){
+  .map-head{display:none}
+  .maprow{grid-template-columns:1fr;gap:10px}
+  .m-arrow{transform:rotate(90deg)}
+}
+
+/* win-win */
+.duo{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:42px}
+.duo::after{content:"+";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:50px;height:50px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--disp);font-weight:600;font-size:26px;display:grid;place-items:center;border:5px solid var(--surface)}
+@media (max-width:880px){.duo{grid-template-columns:1fr}.duo::after{display:none}}
+.wcard{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:30px 28px}
+.wcard.ps{border-top:4px solid var(--accent)}
+.wcard.me{border-top:4px solid var(--slate)}
+.wtag{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+.checks{list-style:none;margin-top:8px}
+.checks li{position:relative;padding:11px 0 11px 28px;border-top:1px dashed var(--line);font-size:16px;color:var(--slate)}
+.checks li:first-child{border-top:0}
+.checks li::before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;border-radius:2px;background:var(--accent)}
+.wcard.me .checks li::before{background:var(--slate)}
+
+/* built cards */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+@media (max-width:980px){.cards3{grid-template-columns:1fr}}
+.bcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:13px;transition:transform .25s,box-shadow .25s}
+.bcard:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(22,35,43,.09)}
+.tag{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep);background:var(--accent-tint);align-self:flex-start;padding:5px 11px;border-radius:999px}
+.tag.dark{background:var(--ink);color:#fff}
+.bcard h3{margin-bottom:0}
+.bcard p{color:var(--muted);font-size:16px}
+.stack{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px;padding-top:6px}
+.schip{font-family:var(--mono);font-size:11.5px;font-weight:500;border:1px solid var(--line);border-radius:6px;padding:3px 9px;color:var(--slate);background:var(--bg)}
+.factline{font-weight:700;color:var(--ink)}
+
+/* gap */
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 14px 14px 0;padding:26px 28px;margin:32px 0;max-width:74ch}
+.callout h3{margin-bottom:8px}
+.callout p{color:var(--muted)}
+.plainer{margin-top:36px;padding-top:28px;border-top:1px dashed rgba(22,35,43,.28);max-width:70ch}
+.plainer h3{font-size:18px}
+.plainer p{color:var(--slate)}
+
+/* curriculum */
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 36px}
+.mchip{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.03em;border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:7px 15px;color:var(--slate)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:860px){.tabs{grid-template-columns:1fr}}
+.tab{position:relative;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:17px 19px;cursor:pointer;font-family:var(--body);transition:border-color .2s,background .2s}
+.tab:hover{border-color:var(--slate)}
+.tab:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.tab .tk{display:block;font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:7px}
+.tab .tn{font-family:var(--disp);font-weight:600;font-size:16.5px;color:var(--ink);line-height:1.3;display:block}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink)}
+.tab[aria-selected="true"] .tk{color:var(--accent-light)}
+.tab[aria-selected="true"] .tn{color:#fff}
+.tbadge{position:absolute;top:13px;right:13px;font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;border-radius:999px;padding:4px 10px}
+.tabpanel{margin-top:26px}
+[hidden]{display:none !important}
+.phasenote{display:flex;gap:14px;align-items:flex-start;background:var(--accent-tint);border-left:4px solid var(--accent);padding:17px 19px;border-radius:0 12px 12px 0;margin-bottom:10px;color:var(--slate);font-size:16px;max-width:none}
+.phasenote b{color:var(--accent-deep)}
+.phasenote.quiet{background:var(--bg);border-left-color:var(--line);color:var(--muted)}
+.phasenote.quiet b{color:var(--slate)}
+.units{border-top:1px solid var(--line);margin-top:16px}
+.unit{border-bottom:1px solid var(--line)}
+.unit-head{width:100%;display:grid;grid-template-columns:56px 1fr 30px;gap:14px;align-items:center;padding:19px 2px;background:none;border:0;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.unit-head:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+.u-num{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--faint)}
+.unit.hot .u-num{color:var(--accent)}
+.u-title{font-weight:700;font-size:17.5px;color:var(--ink);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.u-flag{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:#fff;padding:3px 10px;border-radius:999px}
+.u-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--muted);font-size:17px;line-height:1;justify-self:end;transition:transform .3s,border-color .2s,color .2s}
+.unit-head:hover .u-icon{border-color:var(--accent);color:var(--accent)}
+.unit.open .u-icon{transform:rotate(45deg);border-color:var(--accent);color:var(--accent)}
+.unit-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s ease}
+.unit-body>.ub-in{overflow:hidden;visibility:hidden;transition:visibility .38s}
+.unit.open .unit-body{grid-template-rows:1fr}
+.unit.open .ub-in{visibility:visible}
+.ub-pad{padding:2px 2px 24px 70px}
+@media (max-width:700px){.ub-pad{padding-left:2px}}
+.ub-pad p{color:var(--muted);max-width:74ch}
+.u-val{margin-top:13px;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:13px 15px;font-size:15.5px;color:var(--slate);max-width:74ch}
+.u-val b{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);display:block;margin-bottom:4px}
+.hint{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:14px;letter-spacing:.04em}
+.fineprint{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:20px;letter-spacing:.02em;max-width:80ch}
+
+/* funding */
+.scens{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+@media (max-width:860px){.scens{grid-template-columns:1fr}}
+.scen{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px}
+.letter{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-family:var(--disp);font-weight:700;font-size:22px;color:#fff;margin-bottom:16px}
+.letter.a{background:var(--ink)}
+.letter.b{background:var(--accent)}
+.cond{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.scen p{color:var(--muted);font-size:16px}
+.costline{margin-top:18px;padding:11px 16px;border-radius:10px;background:var(--accent-tint);color:var(--accent-deep);font-weight:700;display:inline-block;font-size:15.5px}
+.fstrip{margin-top:26px;background:var(--ink);color:#EDF1EF;border-radius:14px;padding:22px 26px;font-size:17px}
+.fstrip b{color:var(--accent-light)}
+
+/* value steps */
+.steps{margin-top:38px;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:88px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid var(--line)}
+.s-num{font-family:var(--mono);font-size:19px;font-weight:600;color:var(--accent);padding-top:3px}
+.step h3{margin-bottom:6px}
+.step p{color:var(--muted);max-width:70ch}
+@media (max-width:640px){.step{grid-template-columns:1fr;gap:6px}}
+
+/* support */
+.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:38px}
+@media (max-width:760px){.grid4{grid-template-columns:1fr}}
+.scard{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;gap:16px}
+.ico{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--accent-deep)}
+.scard h3{font-size:17.5px;margin-bottom:5px}
+.scard p{font-size:15.5px;color:var(--muted)}
+.supfoot{margin-top:24px;color:var(--muted);font-size:16.5px}
+.supfoot b{color:var(--ink)}
+
+/* proposal dark */
+.dark .prose p{color:var(--on-dark);font-size:17.5px}
+.contacts{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--mono);font-size:13px;color:var(--on-dark-muted)}
+.contacts a{color:var(--accent-light);text-decoration:none}
+.contacts a:hover{text-decoration:underline}
+
+/* close */
+.closer{max-width:780px;margin:0 auto;text-align:center}
+.closer::before{content:"";display:block;width:46px;height:3px;background:var(--accent);margin:0 auto 30px;border-radius:2px}
+.closer p{font-family:var(--disp);font-weight:600;font-size:clamp(23px,3.3vw,33px);line-height:1.35;color:var(--ink)}
+.sig{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:26px}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding:36px 0 44px}
+.foot-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.02em}
+.foot a{color:var(--muted);text-decoration:none}
+.foot a:hover{color:var(--ink)}
+.endmark{width:100%;text-align:center;margin-top:28px;font-family:var(--mono);font-size:11px;letter-spacing:.34em;color:var(--faint);text-transform:uppercase}
+
+@media (max-width:640px){
+  .sec{padding:74px 0}
+  .hero{padding:36px 0 78px}
+  body{font-size:16.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .js .reveal{opacity:1;transform:none}
+}
+@media print{
+  .top-nav,.skip,.nav-cta{display:none !important}
+  .tabpanel[hidden]{display:block !important}
+  .unit .unit-body{grid-template-rows:1fr !important}
+  .ub-in{visibility:visible !important}
+  .js .reveal{opacity:1 !important;transform:none !important}
+  .sec{padding:44px 0}
+}
+
+/* --- evidence 2x2 --- */
+.cards4{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+@media (max-width:820px){.cards4{grid-template-columns:1fr}}
+
+/* --- provider note (curriculum) --- */
+.provider-note{max-width:74ch;color:var(--muted);font-size:16px;margin:18px 0 6px}
+.provider-note a{color:var(--accent-deep);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--line);transition:border-color .15s}
+.provider-note a:hover{border-color:var(--accent)}
+.prog-link{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--accent-deep);text-decoration:none;border-bottom:1.5px solid var(--accent-tint);padding-bottom:2px}
+.prog-link:hover{border-color:var(--accent)}
+
+/* --- support off-the-job note --- */
+.supnote{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:16px 18px;color:var(--muted);font-size:15.5px;max-width:78ch}
+.supnote b{color:var(--ink)}
+
+/* --- learner journey timeline --- */
+.timeline{margin-top:40px}
+.tl-track{position:relative;margin-left:14px;padding-left:34px;border-left:2px solid var(--line)}
+.tl-phasehead{position:relative;margin:30px 0 8px;padding:11px 17px;border-radius:10px;background:var(--ink);color:#fff;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.tl-phasehead:first-child{margin-top:0}
+.tl-phasehead .tl-pnum{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-light)}
+.tl-phasehead .tl-pname{font-family:var(--disp);font-weight:600;font-size:16px}
+.tl-phasehead .tl-pmon{font-family:var(--mono);font-size:11.5px;color:var(--on-dark-muted);margin-left:auto}
+.tl-phasehead.core{background:var(--accent-deep)}
+.tl-phasehead.core .tl-pnum{color:#fff}
+.tl-phasehead::before{content:"";position:absolute;left:-45px;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:5px;background:var(--ink);border:3px solid var(--bg)}
+.tl-phasehead.core::before{background:var(--accent)}
+.tl-m{position:relative;display:grid;grid-template-columns:118px 1fr;gap:16px;align-items:baseline;padding:15px 2px}
+.tl-m + .tl-m{border-top:1px dashed var(--line)}
+.tl-m::before{content:"";position:absolute;left:-42px;top:19px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:2px solid var(--faint)}
+.tl-m.flagged::before{border-color:var(--accent);background:var(--accent);box-shadow:0 0 0 4px var(--accent-tint)}
+.tl-mon{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.03em;color:var(--muted)}
+.tl-unit{font-weight:700;color:var(--ink);font-size:16.5px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tl-m.soft .tl-unit{font-weight:500;color:var(--muted)}
+.tl-epa{position:relative;margin-top:22px;padding:20px 22px;background:var(--ink);color:var(--on-dark);border-radius:14px;font-size:16px;max-width:78ch}
+.tl-epa b{color:#fff}
+.tl-epa .tl-epatag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-light);display:block;margin-bottom:6px}
+.tl-epa::before{content:"";position:absolute;left:-45px;top:24px;width:20px;height:20px;border-radius:6px;background:var(--accent);border:3px solid var(--bg)}
+@media (max-width:640px){
+  .tl-track{padding-left:26px;margin-left:8px}
+  .tl-m{grid-template-columns:1fr;gap:3px}
+  .tl-m::before{left:-34px;top:17px}
+  .tl-phasehead::before{left:-37px}
+  .tl-phasehead .tl-pmon{margin-left:0;width:100%}
+  .tl-epa::before{left:-37px}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#proposal">Skip to content</a>
+
+<nav class="top-nav" aria-label="Page navigation">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <span class="bm">Q</span>
+      <span class="bt">Proposal · <b>PortSwigger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="#proposal" data-sec="proposal">Proposal</a>
+      <a href="#why" data-sec="why">Why now</a>
+      <a href="#gap" data-sec="gap">The gap</a>
+      <a href="#curriculum" data-sec="curriculum">Curriculum</a>
+      <a href="#journey" data-sec="journey">Journey</a>
+      <a href="#built" data-sec="built">Evidence</a>
+      <a href="#funding" data-sec="funding">Funding</a>
+      <a href="#support" data-sec="support">Support</a>
+    </div>
+    <a class="nav-cta" href="mailto:qkhussain89@gmail.com?subject=Apprenticeship%20proposal%20from%20Qamar%20Hussain">Get in touch</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="docmeta reveal" role="presentation">
+      <div class="dm"><span>For</span><div>PortSwigger, Knutsford</div></div>
+      <div class="dm"><span>From</span><div>Qamar Hussain</div></div>
+      <div class="dm"><span>Re</span><div>A funded, fixed-term route into your AI capability</div></div>
+      <div class="dm"><span>Status</span><div>For consideration · July 2026</div></div>
+    </div>
+    <p class="eyebrow reveal d1">A proposal for PortSwigger</p>
+    <h1 class="reveal d1">A funded route into the AI capability you are building.</h1>
+    <p class="lead reveal d2">PortSwigger is building an internal AI capability. This is a specific proposal to help build it through a defined, government-funded apprenticeship on a fixed eighteen-month term: real work from month one, the training already paid for, and your decision at the end with no obligation either way.</p>
+    <div class="cta-row reveal d3">
+      <a class="btn" href="#proposal">Read the proposal <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a class="quiet-link" href="#curriculum">Or jump to the curriculum &darr;</a>
+    </div>
+    <div class="facts reveal d4">
+      <span class="fact">Government funds the training</span>
+      <span class="fact">Fixed eighteen-month term</span>
+      <span class="fact">Your decision at the end</span>
+    </div>
+    <p class="credit reveal d4">Prepared for PortSwigger by Qamar Hussain · Manchester · July 2026</p>
+  </div>
+</header>
+
+<!-- ===================== PROPOSAL ===================== -->
+<section class="sec dark" id="proposal">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">01</span> The ask</p>
+    <h2 class="reveal">The proposal, in one paragraph</h2>
+    <div class="prose">
+      <p class="lead reveal d1">I am asking for one thing, and it is smaller than it may first look: an eighteen-month, fixed-term sponsorship onto the Level 4 AI and Automation Practitioner apprenticeship, so I can do real work inside the AI capability you are building while the government funds the training.</p>
+      <p class="reveal d1">To be completely clear about what this is not. I am not asking for a permanent job, and I am not asking you to commit to me indefinitely. This is a defined, temporary arrangement with an end date already built in: fifteen months of the programme, the twelve-week end-point assessment, and then it stops unless you choose otherwise.</p>
+      <p class="reveal d2">At the end of the term, the call is entirely yours. If eighteen months of real work has earned a permanent place, I would be glad to stay. If it has not, the arrangement simply ends, we part on good terms, and I move on. You hold that exit the whole way through, and I would far rather set it out plainly than leave you wondering about it.</p>
+      <p class="reveal d2">In between, here is the exchange. You get a builder on your real problems from month one, at apprentice terms, with the training already paid for and the exact gap your feedback named being closed month by month. I get the structured depth I was told to go and build, at the one company I have wanted to join throughout all of this.</p>
+      <p class="reveal d2"><strong>That is the whole ask: eighteen months, funded, and your decision at the end.</strong></p>
+    </div>
+    <div class="cta-row reveal d2" style="margin-bottom:0">
+      <a class="btn" href="mailto:qkhussain89@gmail.com?subject=Apprenticeship%20proposal%20from%20Qamar%20Hussain">Start a conversation <span class="arr" aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="contacts reveal d3">
+      <a href="mailto:qkhussain89@gmail.com">qkhussain89@gmail.com</a>
+      <span>+44 7722 214 127</span>
+      <a href="https://linkedin.com/in/qamar-hussain-62646966" rel="noopener">linkedin.com/in/qamar-hussain-62646966</a>
+      <span>Manchester, UK</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY NOW ===================== -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">02</span> Why now</p>
+    <h2 class="reveal">Why now, and why this fits</h2>
+    <div class="prose">
+      <p class="lead reveal d1">PortSwigger is early in a serious internal AI transformation, and hiring a new kind of team to drive it. The AI Pioneer brief describes the job precisely: embed with a team, find where the friction really is, build something that works, evaluate it honestly, hand it over, move on.</p>
+      <p class="reveal d1">Separately, the UK government designed an apprenticeship standard for exactly this moment. The Level 4 AI and Automation Practitioner programme exists so employers can build internal AI and automation capability by training someone on their real work, inside the business, with the training bill covered.</p>
+      <p class="pull reveal d2">Put the two side by side and the overlap is hard to ignore.</p>
+    </div>
+    <div class="map reveal d2" aria-label="How the AI Pioneer role maps to the apprenticeship programme">
+      <div class="map-head"><span>The AI Pioneer loop</span><span></span><span>The programme trains</span></div>
+      <div class="maprow">
+        <div class="m-left">Embed and discover the opportunity</div>
+        <div class="m-arrow" aria-hidden="true">&rarr;</div>
+        <div class="m-right"><span class="u-ref">Units 1 to 3</span>Discovery, process mapping, fit assessments, value scoring</div>
+      </div>
+      <div class="maprow">
+        <div class="m-left">Design, build and integrate the solution</div>
+        <div class="m-arrow" aria-hidden="true">&rarr;</div>
+        <div class="m-right"><span class="u-ref">Units 4 to 7</span>Pilot design, cloud and API integration, agentic systems</div>
+      </div>
+      <div class="maprow">
+        <div class="m-left">Evaluate it properly</div>
+        <div class="m-arrow" aria-hidden="true">&rarr;</div>
+        <div class="m-right"><span class="u-ref">Units 8 and 10</span>Testing, monitoring, benefits realisation and ROI</div>
+      </div>
+      <div class="maprow">
+        <div class="m-left">Hand it over so it keeps running</div>
+        <div class="m-arrow" aria-hidden="true">&rarr;</div>
+        <div class="m-right"><span class="u-ref">Units 8 and 11</span>Runbooks, release packs, adoption planning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE GAP ===================== -->
+<section class="sec tinted" id="gap">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">03</span> Candour</p>
+    <h2 class="reveal">Closing the gap you named</h2>
+    <div class="prose">
+      <p class="lead reveal d1">I applied for AI Pioneer and reached the later stages of the process. Your feedback was direct, and I am glad it was: the strongest candidates were already building multi-agent autonomous workflows, their own APIs and MCPs as day-to-day work. I was not at that depth yet.</p>
+      <p class="reveal d1">I am not going to argue with the feedback. Instead I went looking for the fastest structured way to close it.</p>
+    </div>
+    <div class="callout reveal d2">
+      <h3>Phase 2 of this programme is built around exactly that gap</h3>
+      <p>Unit 6 covers API integration in depth: authentication, authorisation, data contracts, resilience and failure handling. Unit 7 covers agentic AI: agent design, prompt orchestration, human-in-the-loop patterns, guardrails and validation. Unit 8 turns assurance into habit: testing, monitoring, release packs and runbooks.</p>
+    </div>
+    <div class="prose">
+      <p class="reveal d2">The syllabus is the floor, not the ceiling. Alongside the course I will keep building my own projects at the deeper end, including MCP servers and multi-agent systems, because self-directed building is how everything in the section above got made.</p>
+    </div>
+    <div class="plainer reveal d3">
+      <h3>Stated just as plainly</h3>
+      <p>I am neurodivergent: ADHD and dyslexia. It is a large part of why I spot patterns and think in systems quickly, and why I cannot leave a problem alone once I start. It also means structure brings out my best. The programme's monthly coaching and built-in neurodiversity support are exactly the scaffolding that turns that intensity into consistent, clearly communicated work. I would rather tell you this straight than have you wonder.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CURRICULUM ===================== -->
+<section class="sec alt" id="curriculum">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">04</span> The programme</p>
+    <h2 class="reveal">The curriculum, unit by unit</h2>
+    <p class="lead reveal d1">The Level 4 AI and Automation Practitioner programme: 15 months of delivery plus a 12-week end-point assessment, across three phases and thirteen units. Every unit produces a concrete artefact, and every artefact can be produced on PortSwigger work.</p>
+    <p class="provider-note reveal d1">A nationally recognised, government-approved apprenticeship standard, delivered by <a href="https://www.apprentify.com/courses/digital-apprenticeships/ai-automation-practitioner/" rel="noopener">Apprentify</a>, an <b>Ofsted Outstanding</b> training provider based in Wilmslow, minutes from your Knutsford HQ.<br><a class="prog-link" href="https://www.apprentify.com/courses/digital-apprenticeships/ai-automation-practitioner/" rel="noopener">View the full programme &rarr;</a></p>
+    <div class="meta reveal d2">
+      <span class="mchip">15 months + 12-week EPA</span>
+      <span class="mchip">3 phases · 13 units</span>
+      <span class="mchip">17 days equivalent live training</span>
+      <span class="mchip">Level 4 · nationally recognised</span>
+    </div>
+
+    <div class="tabs reveal d2" role="tablist" aria-label="Programme phases">
+      <button class="tab" role="tab" id="tab-p1" aria-controls="panel-p1" aria-selected="true" tabindex="0">
+        <span class="tk">Phase 1 · Months 1 to 4</span>
+        <span class="tn">Discover opportunities &amp; build your first automation</span>
+      </button>
+      <button class="tab" role="tab" id="tab-p2" aria-controls="panel-p2" aria-selected="false" tabindex="-1">
+        <span class="tk">Phase 2 · Months 5 to 9</span>
+        <span class="tn">AI engineering, integration &amp; agentic systems</span>
+        <span class="tbadge">Core</span>
+      </button>
+      <button class="tab" role="tab" id="tab-p3" aria-controls="panel-p3" aria-selected="false" tabindex="-1">
+        <span class="tk">Phase 3 · Months 10 to 15</span>
+        <span class="tn">Enterprise deployment, LLMOps &amp; AI transformation</span>
+      </button>
+    </div>
+
+    <!-- PHASE 1 -->
+    <div class="tabpanel" id="panel-p1" role="tabpanel" aria-labelledby="tab-p1">
+      <div class="phasenote quiet"><span><b>Phase 1.</b> Spot the right opportunities, qualify them properly, and turn one into a safe, well-designed first pilot.</span></div>
+      <div class="units">
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u1b" id="u1h">
+            <span class="u-num">01</span>
+            <span class="u-title">Digital Strategy &amp; Agentic AI</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u1b" role="region" aria-labelledby="u1h"><div class="ub-in"><div class="ub-pad">
+            <p>A practical foundation for adoption: spotting high-value opportunities, scoping work clearly, and designing safe early automations with human checks. Produces a first agent concept with defined value, boundaries and governance.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>A repeatable method for finding the right first automation inside any PortSwigger team.</div>
+          </div></div></div>
+        </div>
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u2b" id="u2h">
+            <span class="u-num">02</span>
+            <span class="u-title">Automation Discovery &amp; Impact</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u2b" role="region" aria-labelledby="u2h"><div class="ub-in"><div class="ub-pad">
+            <p>Disciplined discovery rather than guesswork: process mapping, data quality, exceptions, decision points and operational risk. Produces a fit assessment covering feasibility, dependencies and next steps.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Fit assessments that tell a team what is worth automating before anything gets built.</div>
+          </div></div></div>
+        </div>
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u3b" id="u3h">
+            <span class="u-num">03</span>
+            <span class="u-title">Automation Value</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u3b" role="region" aria-labelledby="u3h"><div class="ub-in"><div class="ub-pad">
+            <p>Quantifying and communicating value so prioritisation is evidence-led: value, effort and risk trade-offs, a simple scoring model, and a prioritised backlog with clear rationale and assumptions.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Effort goes where the return is, and the reasoning is written down.</div>
+          </div></div></div>
+        </div>
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u4b" id="u4h">
+            <span class="u-num">04</span>
+            <span class="u-title">Solutions Lifecycle</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u4b" role="region" aria-labelledby="u4h"><div class="ub-in"><div class="ub-pad">
+            <p>From idea to scalable pilot: maintainability, support and ownership decisions, integration and data constraints, and a pilot design pack with controls, acceptance criteria, a testing approach and a rollout plan.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Pilots designed to survive handover, with clear ownership from day one.</div>
+          </div></div></div>
+        </div>
+      </div>
+      <p class="hint">Tap a unit to expand it.</p>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="tabpanel" id="panel-p2" role="tabpanel" aria-labelledby="tab-p2" hidden>
+      <div class="phasenote"><span><b>Phase 2 is the hands-on engineering and agentic core.</b> Real automations, platform and API integration, agentic patterns, and the assurance that keeps them reliable after go-live. This is the phase that answers your feedback directly.</span></div>
+      <div class="units">
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u5b" id="u5h">
+            <span class="u-num">05</span>
+            <span class="u-title">Automation Governance</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u5b" role="region" aria-labelledby="u5h"><div class="ub-in"><div class="ub-pad">
+            <p>Safe, compliant, reliable automations through practical data governance: architecture, classification, access, retention and auditability. Produces a data handling plan covering lineage, permissions, controls and audit evidence.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Automation a security company can stand behind: lineage, permissions and audit evidence by default.</div>
+          </div></div></div>
+        </div>
+        <div class="unit hot">
+          <button class="unit-head" aria-expanded="false" aria-controls="u6b" id="u6h">
+            <span class="u-num">06</span>
+            <span class="u-title">Cloud Automation <span class="u-flag">Named in your feedback</span></span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u6b" role="region" aria-labelledby="u6h"><div class="ub-in"><div class="ub-pad">
+            <p>Connecting automations to business systems safely with proven integration patterns: authentication, authorisation, resilience and error handling. Produces an integration specification covering APIs, data contracts, dependencies and failure handling.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Directly builds the API depth your feedback asked for.</div>
+          </div></div></div>
+        </div>
+        <div class="unit hot">
+          <button class="unit-head" aria-expanded="false" aria-controls="u7b" id="u7h">
+            <span class="u-num">07</span>
+            <span class="u-title">Agentic AI <span class="u-flag">Named in your feedback</span></span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u7b" role="region" aria-labelledby="u7h"><div class="ub-in"><div class="ub-pad">
+            <p>Using generative agents responsibly and well: grounding, prompt design and orchestration, human-in-the-loop patterns, guardrails and validation checks, reducing hallucination and data leakage. Produces a full agent design specification.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>The agentic and multi-agent depth at the centre of your feedback, made day-to-day practice.</div>
+          </div></div></div>
+        </div>
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u8b" id="u8h">
+            <span class="u-num">08</span>
+            <span class="u-title">Automation Assurance</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u8b" role="region" aria-labelledby="u8h"><div class="ub-in"><div class="ub-pad">
+            <p>Taking automations and agents live safely and keeping them reliable: testing, release and monitoring practices that prevent firefighting. Produces a release pack with test evidence, a communications plan and a runbook.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Everything I hand over arrives with tests, monitoring and a runbook.</div>
+          </div></div></div>
+        </div>
+      </div>
+      <p class="hint">Tap a unit to expand it.</p>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="tabpanel" id="panel-p3" role="tabpanel" aria-labelledby="tab-p3" hidden>
+      <div class="phasenote quiet"><span><b>Phase 3.</b> Organisational reality: governance, ROI, adoption and strategy, so wins scale across the business without risk or tool sprawl.</span></div>
+      <div class="units">
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u9b" id="u9h">
+            <span class="u-num">09</span>
+            <span class="u-title">Responsible AI</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u9b" role="region" aria-labelledby="u9h"><div class="ub-in"><div class="ub-pad">
+            <p>Turning policy and ethics into practical design decisions and evidence: spotting compliance risk early, with structured risk assessment, mitigations and escalation routes. Produces an audit-ready evidence set covering decisions, controls and approvals.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Responsible AI evidence that stands up to the scrutiny a security company invites.</div>
+          </div></div></div>
+        </div>
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u10b" id="u10h">
+            <span class="u-num">10</span>
+            <span class="u-title">Benefits Realisation</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u10b" role="region" aria-labelledby="u10h"><div class="ub-in"><div class="ub-pad">
+            <p>Proving value after go-live: measuring performance, drift and unintended harm, ROI basics, and simple analytics to prioritise improvements. Produces a benefits tracking report with clear recommendations.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Proof, in numbers, that each build actually helped, and by how much.</div>
+          </div></div></div>
+        </div>
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u11b" id="u11h">
+            <span class="u-num">11</span>
+            <span class="u-title">Scalable Automation</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u11b" role="region" aria-labelledby="u11h"><div class="ub-in"><div class="ub-pad">
+            <p>Scaling beyond isolated wins: practical change management for non-technical audiences, stakeholder and champion models, training and support. Produces an adoption plan covering capability uplift, communications and feedback loops.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Wins that spread across teams instead of staying local.</div>
+          </div></div></div>
+        </div>
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u12b" id="u12h">
+            <span class="u-num">12</span>
+            <span class="u-title">Future AI Strategy</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u12b" role="region" aria-labelledby="u12h"><div class="ub-in"><div class="ub-pad">
+            <p>Turning trends into practical decisions: vendor and tool evaluation for fit, security, integration and total cost of ownership. Produces a forward roadmap with clear principles, options and decision points.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>A sharp, current view on which tools deserve PortSwigger's money.</div>
+          </div></div></div>
+        </div>
+        <div class="unit">
+          <button class="unit-head" aria-expanded="false" aria-controls="u13b" id="u13h">
+            <span class="u-num">13</span>
+            <span class="u-title">Capstone Project &amp; EPA Preparation</span>
+            <span class="u-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="unit-body" id="u13b" role="region" aria-labelledby="u13h"><div class="ub-in"><div class="ub-pad">
+            <p>A complete end-to-end automation or agent solution, from discovery to benefits tracking. Produces a full delivery pack: pilot design, build outputs, governance evidence, test results, release plan, runbook and benefits report.</p>
+            <div class="u-val"><b>Value to PortSwigger</b>Delivered on a genuine PortSwigger problem: the qualification's final project becomes your asset.</div>
+          </div></div></div>
+        </div>
+      </div>
+      <p class="hint">Tap a unit to expand it.</p>
+    </div>
+
+    <p class="fineprint">Unit details condensed from the <a href="https://www.apprentify.com/courses/digital-apprenticeships/ai-automation-practitioner/" rel="noopener">Apprentify programme handbook</a>.</p>
+  </div>
+</section>
+
+<!-- ===================== JOURNEY ===================== -->
+<section class="sec" id="journey">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">05</span> The journey</p>
+    <h2 class="reveal">How the fifteen months actually run</h2>
+    <p class="lead reveal d1">Not a pile of self-study in the evenings. A structured, month-by-month path: a unit each month, applied to real PortSwigger work, with coaching every month. The two months your feedback pointed at are marked in orange.</p>
+    <div class="timeline reveal d1">
+      <div class="tl-track">
+
+        <div class="tl-phasehead"><span class="tl-pnum">Phase 01</span><span class="tl-pname">Discover and build your first automation</span><span class="tl-pmon">Months 1 to 4</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 1</span><span class="tl-unit">Digital Strategy &amp; Agentic AI</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 2</span><span class="tl-unit">Automation Discovery &amp; Impact</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 3</span><span class="tl-unit">Automation Value</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 4</span><span class="tl-unit">Solutions Lifecycle</span></div>
+
+        <div class="tl-phasehead core"><span class="tl-pnum">Phase 02 · Core</span><span class="tl-pname">AI engineering, integration &amp; agentic systems</span><span class="tl-pmon">Months 5 to 9</span></div>
+        <div class="tl-m soft"><span class="tl-mon">Month 5</span><span class="tl-unit">Applied practice &amp; coaching</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 6</span><span class="tl-unit">Automation Governance</span></div>
+        <div class="tl-m flagged"><span class="tl-mon">Month 7</span><span class="tl-unit">Cloud Automation <span class="u-flag">Named in your feedback</span></span></div>
+        <div class="tl-m flagged"><span class="tl-mon">Month 8</span><span class="tl-unit">Agentic AI <span class="u-flag">Named in your feedback</span></span></div>
+        <div class="tl-m"><span class="tl-mon">Month 9</span><span class="tl-unit">Automation Assurance</span></div>
+
+        <div class="tl-phasehead"><span class="tl-pnum">Phase 03</span><span class="tl-pname">Enterprise deployment, LLMOps &amp; AI transformation</span><span class="tl-pmon">Months 10 to 15</span></div>
+        <div class="tl-m soft"><span class="tl-mon">Month 10</span><span class="tl-unit">Applied practice &amp; coaching</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 11</span><span class="tl-unit">Responsible AI</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 12</span><span class="tl-unit">Benefits Realisation</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 13</span><span class="tl-unit">Scalable Automation</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 14</span><span class="tl-unit">Future AI Strategy</span></div>
+        <div class="tl-m"><span class="tl-mon">Month 15</span><span class="tl-unit">Capstone Project &amp; EPA Preparation</span></div>
+
+        <div class="tl-epa"><span class="tl-epatag">Then · the end-point assessment</span><b>Twelve weeks</b>, delivering one complete build on a real PortSwigger problem: discovery, pilot, governance evidence, testing, runbook and a benefits report. The final assessment produces an asset you keep.</div>
+
+      </div>
+    </div>
+    <p class="fineprint reveal d2">Month-by-month structure from the <a href="https://www.apprentify.com/courses/digital-apprenticeships/ai-automation-practitioner/" rel="noopener">Apprentify programme handbook</a>. Coaching runs every month, with progress reviews at Months 3 and 7.</p>
+  </div>
+</section>
+
+<!-- ===================== EVIDENCE ===================== -->
+<section class="sec alt" id="built">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">06</span> Evidence</p>
+    <h2 class="reveal">What I already build</h2>
+    <p class="lead reveal d1">Everything below is live or delivered, with real users or a real business on the other end. <span class="factline">Real, live and evaluated. Nothing here is hypothetical.</span></p>
+    <div class="cards4">
+      <article class="bcard reveal d1">
+        <span class="tag">Live on the App Store · paying subscribers</span>
+        <h3>Munajat · AI mobile app</h3>
+        <p>Designed and built solo in about three and a half months. Flutter frontend, Supabase backend, OpenAI generation driven by an engineered system prompt of roughly 7,900 tokens, with guardrails, escalation logic and variance rules. Live, with subscribers who pay for it every month.</p>
+        <div class="stack"><span class="schip">Flutter</span><span class="schip">Supabase</span><span class="schip">OpenAI</span><span class="schip">Claude Code</span><span class="schip">VS Code</span><span class="schip">DreamFlow</span></div>
+      </article>
+      <article class="bcard reveal d2">
+        <span class="tag">Running daily in a live business</span>
+        <h3>Client KPI automation</h3>
+        <p>Embedded with a small food business, mapped where the operational pain actually sat, and built an n8n workflow that compiles a daily digest of seven key business metrics and sends it to the owner every morning. It has run every day since handover, without me.</p>
+        <div class="stack"><span class="schip">n8n</span><span class="schip">Google Sheets</span></div>
+      </article>
+      <article class="bcard reveal d3">
+        <span class="tag">Prompt-optimisation web app</span>
+        <h3>PLOOP AI · prompt optimisation</h3>
+        <p>A prompt-optimisation web app built end to end in Replit. Users move through a structured loop, input, AI suggestion, edit and compare, to pull reliable and consistent results out of language models. Supabase handles quota tracking, plan tiers and event logging, Stripe runs the subscription tiers, and ElevenLabs adds a voice layer.</p>
+        <div class="stack"><span class="schip">Replit</span><span class="schip">OpenAI</span><span class="schip">ElevenLabs</span><span class="schip">Supabase</span><span class="schip">Stripe</span></div>
+      </article>
+      <article class="bcard reveal d4">
+        <span class="tag dark">Built for your application task</span>
+        <h3>Contract triage tool</h3>
+        <p>For your own application exercise I built a nine-node n8n workflow that triages contracts, with an evaluation framework to show where it worked and where it failed. Built the way I would build inside PortSwigger: tested, measured, documented.</p>
+        <div class="stack"><span class="schip">n8n</span><span class="schip">OpenAI</span><span class="schip">Evaluation framework</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WIN-WIN ===================== -->
+<section class="sec tinted" id="winwin">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">07</span> The win-win</p>
+    <h2 class="reveal">One arrangement, two clear wins</h2>
+    <p class="lead reveal d1">An apprenticeship is not a favour to the apprentice. Structured properly, it is a low-cost, low-risk way for PortSwigger to add building capacity while the government pays for the training.</p>
+    <div class="duo">
+      <div class="wcard ps reveal d1">
+        <p class="wtag">The PortSwigger side</p>
+        <h3>What PortSwigger gets</h3>
+        <ul class="checks">
+          <li>A builder embedded on real internal automation problems from month one, not after graduation.</li>
+          <li>Each month's learning applied to your work the same month it is taught.</li>
+          <li>Apprentice terms: genuine capability at a fraction of the senior band you advertised.</li>
+          <li>Training funded by government, worth up to &pound;18,000, at little to no new cost.</li>
+          <li>A structured, fixed eighteen-month engagement with monthly reviews and a named coach. Low risk by design.</li>
+          <li>A byproduct: structured AI upskilling for the wider team through short share-back sessions.</li>
+        </ul>
+      </div>
+      <div class="wcard me reveal d2">
+        <p class="wtag">My side</p>
+        <h3>What I bring, and what I gain</h3>
+        <ul class="checks">
+          <li>Nine months of real, live AI builds pointed at your problems from day one.</li>
+          <li>The habits of eight years in regulated science: measure everything, document everything.</li>
+          <li>A structured route through the exact gap your feedback named: agentic systems, APIs, MCPs.</li>
+          <li>Coaching and assessment that sharpen how I work and how I communicate.</li>
+          <li>Local and settled: relocating to Manchester this month, minutes from Knutsford.</li>
+          <li>One company, joined properly. I am looking to build somewhere long term, not pass through.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FUNDING ===================== -->
+<section class="sec" id="funding">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">08</span> The funding</p>
+    <h2 class="reveal">How the funding works</h2>
+    <p class="lead reveal d1">The training itself costs &pound;18,000, met through the UK apprenticeship system rather than from PortSwigger's budget. There are two possible scenarios, and both are simple.</p>
+    <div class="scens">
+      <div class="scen reveal d1">
+        <div class="letter a">A</div>
+        <h3>If PortSwigger pays the apprenticeship levy</h3>
+        <p class="cond">UK payroll above &pound;3m a year</p>
+        <p>Levy employers already set aside 0.5% of payroll into a training pot, money that is use it or lose it. The &pound;18,000 draws down from that existing pot: funds already earmarked for exactly this purpose.</p>
+        <span class="costline">New training spend: &pound;0</span>
+      </div>
+      <div class="scen reveal d2">
+        <div class="letter b">B</div>
+        <h3>If PortSwigger is below the levy threshold</h3>
+        <p class="cond">Non-levy employer</p>
+        <p>Government funds 95% of the training directly. The remaining 5%, at most &pound;900 across the whole programme, is frequently covered in full by a levy transfer from a larger employer.</p>
+        <span class="costline">Typical training spend: &pound;0 to &pound;900</span>
+      </div>
+    </div>
+    <div class="fstrip reveal d2">In either scenario the training is effectively already paid for. <b>PortSwigger's real commitment is a genuine wage for genuine work</b>, and that is the part I intend to earn.</div>
+    <p class="fineprint reveal d3">Based on the published programme cost and current UK apprenticeship funding rules. I am happy to walk your people team through the mechanics.</p>
+  </div>
+</section>
+
+<!-- ===================== VALUE ===================== -->
+<section class="sec alt" id="value">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">09</span> The return</p>
+    <h2 class="reveal">Value from month one, compounding</h2>
+    <p class="lead reveal d1">The structure of an apprenticeship means nothing is theoretical and nothing waits until the end.</p>
+    <div class="steps">
+      <div class="step reveal d1">
+        <div class="s-num">01</div>
+        <div>
+          <h3>Applied immediately</h3>
+          <p>Every unit is learned on your real work, not in a classroom vacuum. Month two's process discovery happens on a PortSwigger process. The API and integration units connect PortSwigger systems. Nothing sits idle for 15 months.</p>
+        </div>
+      </div>
+      <div class="step reveal d2">
+        <div class="s-num">02</div>
+        <div>
+          <h3>Shared as I go</h3>
+          <p>Short internal sessions passing on each month's learning give the wider team structured AI upskilling as a byproduct, and quietly show where the knowledge gaps sit across the business.</p>
+        </div>
+      </div>
+      <div class="step reveal d3">
+        <div class="s-num">03</div>
+        <div>
+          <h3>Finished on a real problem</h3>
+          <p>The end-point assessment is a genuine end-to-end delivery on a real PortSwigger business problem: discovery, build, governance evidence, testing, runbook and benefits report. The final exam produces an asset you keep.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SUPPORT ===================== -->
+<section class="sec" id="support">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="kn">10</span> The structure</p>
+    <h2 class="reveal">You would not be developing me alone</h2>
+    <p class="lead reveal d1">The programme comes with its own scaffolding, so PortSwigger is supported in developing an apprentice rather than carrying it single-handed.</p>
+    <div class="grid4">
+      <div class="scard reveal d1">
+        <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg></div>
+        <div>
+          <h3>Monthly 1:1 coaching</h3>
+          <p>A named Apprentify development coach, monthly sessions, progress tracked and visible to you throughout.</p>
+        </div>
+      </div>
+      <div class="scard reveal d2">
+        <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H9l-4.2 3.4c-.4.3-.8 0-.8-.5V6.5z"/><path d="M8.5 9.5h7M8.5 12.5h4.5"/></svg></div>
+        <div>
+          <h3>Live AI drop-in clinics</h3>
+          <p>Specialist AI trainers, live sessions four days a week, for sense-checking real use cases and decisions.</p>
+        </div>
+      </div>
+      <div class="scard reveal d3">
+        <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3"/><path d="M3.5 19c.6-3 2.6-4.5 5-4.5s4.4 1.5 5 4.5"/><circle cx="16.5" cy="9" r="2.4"/><path d="M14.6 14.9c.6-.3 1.2-.4 1.9-.4 2.1 0 3.6 1.2 4 3.5"/></svg></div>
+        <div>
+          <h3>A working partnership</h3>
+          <p>Your line manager and the development coach work together: monthly reviews, shared visibility, a clear picture of progress.</p>
+        </div>
+      </div>
+      <div class="scard reveal d4">
+        <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4.5"/><path d="M9.5 12.8 8 21l4-2.2L16 21l-1.5-8.2"/></svg></div>
+        <div>
+          <h3>A recognised outcome</h3>
+          <p>A Level 4 qualification on completion, with eligibility for RITTech professional registration.</p>
+        </div>
+      </div>
+    </div>
+    <div class="supnote reveal d4"><b>On the time commitment.</b> The programme protects about a fifth of working time for off-the-job learning. On this one, much of that is the real automation work itself, so those hours count as delivery and development at the same time.</div>
+    <p class="supfoot reveal d4">The provider, <a href="https://www.apprentify.com/courses/digital-apprenticeships/ai-automation-practitioner/" rel="noopener">Apprentify</a>, is rated Outstanding by Ofsted and based in Wilmslow, minutes from your Knutsford HQ.</p>
+  </div>
+</section>
+
+<!-- ===================== CLOSE ===================== -->
+<section class="sec alt" id="close">
+  <div class="wrap">
+    <div class="closer reveal">
+      <p>Two and a half years of working my way back into a career I care about. Nine months of teaching myself to build. The rest, I would rather prove through the work.</p>
+      <p class="sig">Qamar Hussain · Manchester · July 2026</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>Prepared for PortSwigger · Qamar Hussain · <a href="mailto:qkhussain89@gmail.com">qkhussain89@gmail.com</a></span>
+    <span>Programme details from the <a href="https://www.apprentify.com/courses/digital-apprenticeships/ai-automation-practitioner/" rel="noopener">Apprentify Level 4 handbook</a></span>
+    <span class="endmark">End of proposal</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var qa=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));};
+
+  /* Scroll-in reveal */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+    qa('.reveal').forEach(function(el){io.observe(el);});
+  }else{
+    qa('.reveal').forEach(function(el){el.classList.add('in');});
+  }
+
+  /* Phase tabs */
+  var tabs=qa('.tab'),panels=qa('.tabpanel');
+  function selectTab(i){
+    tabs.forEach(function(t,j){
+      var on=(i===j);
+      t.setAttribute('aria-selected',on?'true':'false');
+      t.tabIndex=on?0:-1;
+      if(panels[j]){panels[j].hidden=!on;}
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(i);});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+        e.preventDefault();
+        var d=(e.key==='ArrowRight')?1:-1;
+        var n=(i+d+tabs.length)%tabs.length;
+        selectTab(n);tabs[n].focus();
+      }
+    });
+  });
+
+  /* Unit accordions */
+  qa('.unit-head').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var u=btn.closest('.unit');
+      var open=u.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+
+  /* Active nav link */
+  var ids=['proposal','why','gap','curriculum','journey','built','funding','support'];
+  var links={};
+  qa('.nav-links a[data-sec]').forEach(function(a){links[a.getAttribute('data-sec')]=a;});
+  if('IntersectionObserver' in window){
+    var io2=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var a=links[e.target.id];
+          if(!a)return;
+          qa('.nav-links a').forEach(function(x){x.classList.remove('active');});
+          a.classList.add('active');
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    ids.forEach(function(id){var el=document.getElementById(id);if(el)io2.observe(el);});
+  }
+
+  /* Nav shadow on scroll */
+  var nav=document.querySelector('.top-nav');
+  window.addEventListener('scroll',function(){
+    nav.classList.toggle('scrolled',window.scrollY>8);
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
